@@ -42,7 +42,7 @@ namespace Guess_Number
                 TxtMessage.Text = "You won Baby!!";
                 BtnCheck.Enabled = false;
                 NudGuess.Enabled = false;
-                BtnPick.Focus();
+                BtnRepeat.Focus();
             }
 
             else if (guess < theNumber)
@@ -82,6 +82,7 @@ namespace Guess_Number
         private void Form1_Load(object sender, EventArgs e)
         {
             theNumber = point.Next(100) + 1;
+            BtnPick.Focus();
         }
 
         private void BtnRepeat_Click(object sender, EventArgs e)
@@ -90,6 +91,7 @@ namespace Guess_Number
             this.InitializeComponent();
             Random point = new Random();
             theNumber = point.Next(100) + 1;
+            BtnPick.Focus();
         }
     }
 }
